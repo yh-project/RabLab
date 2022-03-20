@@ -10,11 +10,23 @@ body {
     align-items: center;
     position: relative;
 }
+.qstn {
+    position: absolute;
+    font-size: 100%;
+    align-items: center;
+    text-align: center;
+    top: 532px;
+}
 
 
 @media ( max-width: 2560px ) {
-    
+    .qstn {
+        top: 266px;
+    }
 }
 @media ( max-width: 1920px ) {
-    
+    .qstn {
+        top: 199.5px;
+        font-size: 30px;
+    }
 }
