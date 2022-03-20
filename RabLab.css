@@ -60,17 +60,22 @@ body {
     bottom: 44px;
     right: 56px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.qstn1 {
+    position: absolute;
+    text-align: center;
+    font-size: 100%;
+    top: 1170px;
+    align-items: center;
+}
+#name {
+    position: absolute;
+    text-align: center;
+    font-size: 100%;
+    top: 1788px;
+    left: 1960px;
+    width: 1198px;
+    height: 306px;
+}
 
 
 @media ( max-width: 2560px ) {
@@ -100,6 +105,15 @@ body {
         max-height: 139px;
         bottom: 22px;
         right: 28px;
+    }
+    .qstn1 {
+        top: 585px;
+    }
+    #name {
+        top: 894px;
+        left: 980px;
+        width: 599px;
+        height: 153px;
     }
 }
 @media ( max-width: 1920px ) {
@@ -137,5 +151,16 @@ body {
         max-height: 104.25px;
         bottom: 16.5px;
         right: 21px;
+    }
+    .qstn1 {
+        font-size: 38px;
+        top: 438.75px;
+    }
+    #name {
+        top: 670.5px;
+        left: 735px;
+        width: 449.25px;
+        height: 114.75px;
+        font-size: 30px;
     }
 }

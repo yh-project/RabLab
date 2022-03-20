@@ -24,6 +24,10 @@ function txt_change() {
     }
 }
 
+function start() {
+    window.location.href = 'RabLab_4.html';
+}
+
 function start_survey() {
     
 }
