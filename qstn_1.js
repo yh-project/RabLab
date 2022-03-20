@@ -24,6 +24,13 @@ const items_cnt = [8,9,6,8,7,6];
 
 var user_name;
 
+var input_arr = [q1, q2, q3, q4, q5, q6, q7];
+for(var i = 1; i<input_arr.length; i++) {
+    input_arr[i].style.visibility = "hidden";
+}
+
+var names = document.getElementById("names");
+
 function input_items() {
     if (cur_state == 0) {
         user_name = document.getElementById("name").value;
