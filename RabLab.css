@@ -52,6 +52,8 @@ body {
     font-size: 100%;
     justify-content: center;
     align-items: center;
+    user-select: none;
+
 }
 #vid {
     position: absolute;
