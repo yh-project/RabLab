@@ -17,16 +17,174 @@ body {
     text-align: center;
     top: 532px;
 }
+#where1 {
+    position: absolute;
+    font-size: 100%;
+    top: 1198px;
+    left: 1290px;
+    width: 620px;
+    text-align: center;
+}
+#where2 {
+    position: absolute;
+    font-size: 100%;
+    top: 1554px;
+    left: 1290px;
+    width: 620px;
+    text-align: center;
+}
+#where3 {
+    position: absolute;
+    font-size: 100%;
+    top: 1906px;
+    left: 1290px;
+    width: 620px;
+    text-align: center;
+}
+#where4 {
+    position: absolute;
+    font-size: 100%;
+    top: 2262px;
+    left: 1290px;
+    width: 620px;
+    text-align: center;
+}
+#where5 {
+    position: absolute;
+    font-size: 100%;
+    top: 1198px;
+    right: 1290px;
+    width: 936px;
+    text-align: center;
+}
+#where6 {
+    position: absolute;
+    font-size: 100%;
+    top: 1554px;
+    right: 1290px;
+    width: 936px;
+    text-align: center;
+}
+#where7 {
+    position: absolute;
+    font-size: 100%;
+    top: 1906px;
+    right: 1290px;
+    width: 936px;
+    text-align: center;
+}
+#where8 {
+    position: absolute;
+    font-size: 100%;
+    top: 2262px;
+    right: 1290px;
+    width: 936px;
+    text-align: center;
+}
+.where {
+    font-family: rixmmjse-pro, serif; 
+    font-weight: 300; 
+    font-style: normal;
+    color: #999999;
+}
 
 
 @media ( max-width: 2560px ) {
     .qstn {
         top: 266px;
     }
+    #where1 {
+        top: 599px;
+        left: 645px;
+        width: 310px;
+    }
+    #where2 {
+        top: 777px;
+        left: 645px;
+        width: 310px;
+    }
+    #where3 {
+        top: 953px;
+        left: 645px;
+        width: 310px;
+    }
+    #where4 {
+        top: 1131px;
+        left: 645px;
+        width: 310px;
+    }
+    #where5 {
+        top: 599px;
+        right: 645px;
+        width: 418px;
+    }
+    #where6 {
+        top: 777px;
+        right: 645px;
+        width: 418px;
+    }
+    #where7 {
+        top: 953px;
+        right: 645px;
+        width: 418px;
+    }
+    #where8 {
+        top: 1131px;
+        right: 645px;
+        width: 418px;
+    }
 }
 @media ( max-width: 1920px ) {
     .qstn {
         top: 199.5px;
-        font-size: 30px;
+        font-size: 38px;
+    }
+    #where1 {
+        top: 449.25px;
+        left: 483.75px;
+        width: 232.5px;
+        font-size: 33px;
+    }
+    #where2 {
+        top: 582.75px;
+        left: 483.75px;
+        width: 232.5px;
+        font-size: 33px;
+    }
+    #where3 {
+        top: 714.75px;
+        left: 483.75px;
+        width: 232.5px;
+        font-size: 33px;
+    }
+    #where4 {
+        top: 848.25px;
+        left: 483.75px;
+        width: 232.5px;
+        font-size: 33px;
+    }
+    #where5 {
+        top: 449.25px;
+        right: 475px;
+        width: 313.5px;
+        font-size: 33px;
+    }
+    #where6 {
+        top: 582.75px;
+        right: 475px;
+        width: 313.5px;
+        font-size: 33px;
+    }
+    #where7 {
+        top: 714.75px;
+        right: 475px;
+        width: 313.5px;
+        font-size: 33px;
+    }
+    #where8 {
+        top: 848.25px;
+        right: 475px;
+        width: 313.5px;
+        font-size: 33px;
     }
 }
