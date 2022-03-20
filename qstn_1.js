@@ -1,14 +1,44 @@
 var selection_list = [];
-for(i in Range(0,9)) {
-    selection_list.push(document.getElementById("qstn"+i));
+var qstn_list = [];
+var name_box = document.getElementById("name");
+for(let i = 1; i <= 9; i++) {
+    selection_list.push(document.getElementById("selection"+i));
+}
+for(let i = 1; i <= 7; i++) {
+    qstn_list.push(document.getElementById("qstn"+i))
 }
 
-for (i in Range(1,9)) {
-    selection_list[i].style.visibility="hidden";
+qstn_list[0].style.visibility="visible"
+
+for (let i = 1; i < 7; i++) {
+    qstn_list[i].style.visibility="hidden";
 }
 
 var cur_state = 0;
+const items_cnt = [8,9,6,8,7,6];
+// const items_css = {}
+// items_css[6] = new sytle;
+// items_css[7] = new sytle;
+// items_css[8] = new sytle;
+// items_css[9] = new style;
+
+var user_name;
 
 function input_items() {
-    if ( )
+    if (cur_state == 0) {
+        user_name = document.getElementById("name").value;
+        console.log(user_name);
+        name_box.style.visibility="hidden";
+    }
+    if (cur_state != 6) {
+        qstn_list[cur_state].style.visibility="hidden";
+
+        // for(let i = 0; i < 9; i++) {
+        //     selection_list[i].style.property = items_css[items_cnt[i]];
+        // }
+
+        qstn_list[++cur_state].style.visibility="visible";
+    }
+    else
+        window.location.href = 'RabLab_2.html';
 }
