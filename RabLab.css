@@ -99,6 +99,14 @@ body {
     width: 1198px;
     height: 306px;
 }
+.back {
+    display: block;
+    margin-right: auto;
+}
+.front {
+    display: block;
+    margin-left: auto;
+}
 
 
 @media ( max-width: 2560px ) {
