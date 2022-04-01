@@ -1,0 +1,42 @@
+#logo {
+    position: absolute;
+    width: 100px;
+    height: 130px;
+}
+#rablab {
+    position: absolute;
+    font-size: 60px;
+    right: 18.9px;
+}
+#name_box {
+    position: absolute;
+    font-size: 29px;
+    height: 39.2px;
+    top: 161.7px;
+    left: 22.9px;
+    text-align: center;
+}
+#day {
+    position: absolute;
+    font-size: 17px;
+    height: 26.7px;
+    top: 226.8px;
+    left: 22.9px;
+    text-align: center;
+}
+#results {
+    position: absolute;
+    font-size: 17px;
+    width: 100%;
+    height: 377.6px;
+    top: 265px;
+    text-align: center;
+    border: solid 1px #000000;
+}
+#trash {
+    position: absolute;
+    font-size: 15px;
+    width: 100%;
+    top: 678.2px;
+    float: left;
+}
