@@ -110,7 +110,6 @@ body {
     margin-right: 32px;
 }
 
-
 @media ( max-width: 2560px ) {
     .text2 {
         top: 832px;
@@ -203,14 +202,14 @@ body {
         right: 21px;
     }
     #vid_1 {
-        max-width: 229.5px;
-        max-height: 237px;
+        max-width: 209px;
+        max-height: 207px;
         top: 310px;
         left: 605px;
     }
     #vid_2 {
-        max-width: 229.5px;
-        max-height: 237px;
+        max-width: 209px;
+        max-height: 207px;
         top: 310px;
         right: 605px;
     }
