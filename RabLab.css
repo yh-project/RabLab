@@ -102,10 +102,12 @@ body {
 .back {
     display: block;
     margin-right: auto;
+    margin-left: 32px;
 }
 .front {
     display: block;
     margin-left: auto;
+    margin-right: 32px;
 }
 
 
