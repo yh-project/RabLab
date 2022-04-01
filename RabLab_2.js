@@ -12,7 +12,26 @@ st3.style.visibility = "hidden";
 txt4.style.visibility = "hidden";
 vid3.style.visibility = "hidden";
 
-function txt_change() {
+// 타 페이지에서 데이터 가져오기(sessionStorage 이용)
+try {
+    if (sessionStorage.getItem('cur_state') != null) {
+        cur_state = sessionStorage.getItem('cur_state');
+        back_change();
+    }
+} catch (error) {
+    console.log(error);
+}
+
+//F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
+document.addEventListener('keyup', e => {
+    if(!(e.key == "F5")) return;
+    event.returnValue = false;
+    sessionStorage.removeItem('cur_state');
+    history.clear;
+    window.location.href = 'index.html';
+});
+
+function front_change() {
     if(cur_state == 0) {
         st1.style.visibility = "hidden";
         st2.style.visibility = "hidden";
@@ -25,6 +44,37 @@ function txt_change() {
         cur_state++;
     }
     else if(cur_state == 1) {
+        sessionStorage.removeItem('cur_state');
         window.location.href = 'RabLab_3.html';
+    }
+}
+
+function back_change() {
+    console.log(cur_state);
+    if(cur_state == 2) {
+        st1.style.visibility = "hidden";
+        st2.style.visibility = "hidden";
+        txt3.style.visibility = "hidden";
+        vid1.style.visibility = "hidden";
+        vid2.style.visibility = "hidden";
+        st3.style.visibility = "visible";
+        txt4.style.visibility = "visible";
+        vid3.style.visibility = "visible";
+        cur_state--;
+    }
+    else if(cur_state == 1) {
+        st1.style.visibility = "visible";
+        st2.style.visibility = "visible";
+        txt3.style.visibility = "visible";
+        vid1.style.visibility = "visible";
+        vid2.style.visibility = "visible";
+        st3.style.visibility = "hidden";
+        txt4.style.visibility = "hidden";
+        vid3.style.visibility = "hidden";
+        cur_state--;
+    }
+    else if(cur_state == 0) {
+        sessionStorage.setItem('cur_state',2);
+        history.back();
     }
 }

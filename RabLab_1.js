@@ -1,20 +1,61 @@
 //페이지간 데이터 전송 -> LocalStorge 사용하기
 
-
 var cur_state = 0;
 var txt1 = document.getElementById("text1");
 var txt2 = document.getElementById("text2");
 txt2.style.visibility = "hidden";
 
-function txt_change() {
+
+// 타 페이지에서 데이터 가져오기(sessionStorage 이용)
+try {
+    if (sessionStorage.getItem('cur_state') != null) {
+        cur_state = sessionStorage.getItem('cur_state');
+        back_change();
+    }
+} catch (error) {
+    console.log(error);
+}
+
+//F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
+document.addEventListener('keyup', e => {
+    if(!(e.key == "F5")) return;
+    event.returnValue = false;
+    sessionStorage.removeItem('cur_state');
+    history.clear;
+    window.location.href = 'index.html';
+});
+
+//앞으로 가는 버튼 클릭
+function front_change() {
+    console.log(cur_state);
     if(cur_state == 0) {
         txt1.style.visibility = "hidden";
         txt2.style.visibility = "visible";
         cur_state++;
     }
     else if(cur_state == 1) {
+        sessionStorage.removeItem('cur_state');
         window.location.href = 'RabLab_2.html';
-        cur_state++;
+    }
+}
+
+//뒤로 가는 버튼 클릭
+function back_change() {
+    console.log(cur_state);
+    if(cur_state == 2) {
+        txt1.style.visibility = "hidden";
+        txt2.style.visibility = "visible";
+        cur_state--;
+    }
+    else if(cur_state == 1) {
+        txt1.style.visibility = "visible";
+        txt2.style.visibility = "hidden";
+        cur_state--;
+    }
+    else if(cur_state == 0) {
+        //영상으로 back하는 코드 필요
+        sessionStorage.removeItem('cur_state');
+        //history.back();
     }
 }
 
@@ -34,5 +75,3 @@ var txtList = [
 \
 7개의 문항에 답해주세요.'
 ]
-
-
