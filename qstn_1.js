@@ -1,8 +1,8 @@
-var selection_list = [];
+var pick_list = [];
 var qstn_list = [];
-var name_box = document.getElementById("name");
+var name_box = document.getElementById("names");
 for(let i = 1; i <= 9; i++) {
-    selection_list.push(document.getElementById("selection"+i));
+    pick_list.push(document.getElementById("p"+i));
 }
 for(let i = 1; i <= 7; i++) {
     qstn_list.push(document.getElementById("qstn"+i))
@@ -13,7 +13,7 @@ qstn_list[0].style.visibility="visible"
 for (let i = 1; i < 7; i++) {
     qstn_list[i].style.visibility="hidden";
 }
-document.getElementById("where").style.visibility="hidden"
+document.getElementById("pick").style.visibility="hidden"
 
 var cur_state = 0;
 const items_cnt = [8,9,6,8,7,6];
@@ -34,7 +34,7 @@ var names = document.getElementById("names");
 
 function input_items() {
     if (cur_state == 0) {
-        user_name = document.getElementById("name").value;
+        user_name = document.getElementById("names").value;
         console.log(user_name);
         name_box.style.visibility="hidden";
     }
@@ -56,6 +56,16 @@ document.addEventListener('keyup', e => {
     if(cur_state != 0) return;
     if(!(e.key == "Enter")) return;
    
-   user_name = document.getElementById("name").value;
+   user_name = document.getElementById("names").value;
    input_items();
 });
+
+function back_change() {
+    sessionStorage.setItem('cur_state',3);
+    history.back();
+}
+
+function front_change() {
+    sessionStorage.removeItem('cur_state');
+    window.location.href = 'qstn_1.html';
+}
