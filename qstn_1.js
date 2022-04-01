@@ -13,6 +13,7 @@ qstn_list[0].style.visibility="visible"
 for (let i = 1; i < 7; i++) {
     qstn_list[i].style.visibility="hidden";
 }
+document.getElementById("where").style.visibility="hidden"
 
 var cur_state = 0;
 const items_cnt = [8,9,6,8,7,6];
@@ -24,10 +25,10 @@ const items_cnt = [8,9,6,8,7,6];
 
 var user_name;
 
-var input_arr = [q1, q2, q3, q4, q5, q6, q7];
-for(var i = 1; i<input_arr.length; i++) {
-    input_arr[i].style.visibility = "hidden";
-}
+// var input_arr = [q1, q2, q3, q4, q5, q6, q7];
+// for(var i = 1; i<input_arr.length; i++) {
+//     input_arr[i].style.visibility = "hidden";
+// }
 
 var names = document.getElementById("names");
 
@@ -49,3 +50,12 @@ function input_items() {
     else
         window.location.href = 'RabLab_2.html';
 }
+
+//키보드 입력 확인
+document.addEventListener('keyup', e => {
+    if(cur_state != 0) return;
+    if(!(e.key == "Enter")) return;
+   
+   user_name = document.getElementById("name").value;
+   input_items();
+});
