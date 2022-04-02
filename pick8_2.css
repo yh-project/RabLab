@@ -18,7 +18,7 @@ body {
     width: 210px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p2 {
@@ -29,7 +29,7 @@ body {
     width: 266px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p3 {
@@ -40,7 +40,7 @@ body {
     width: 200px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p4 {
@@ -51,7 +51,7 @@ body {
     width: 277px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p5 {
@@ -62,7 +62,7 @@ body {
     width: 233px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p6 {
@@ -73,7 +73,7 @@ body {
     width: 201px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p7 {
@@ -84,7 +84,7 @@ body {
     width: 277px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 #p8 {
@@ -95,7 +95,7 @@ body {
     width: 354px;
     height: 65px;
     text-align: center;
-    border: solid 3px #727272;
+    border: solid 0px #727272;
     color: #727272;
 }
 .p_style {
@@ -103,6 +103,7 @@ body {
     font-weight: 300; 
     font-style: normal;
     color: #999999;
+    user-select: none;
 }
 
 @media ( min-width: 2560px ) {

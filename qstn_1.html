@@ -22,25 +22,25 @@
 <body>
     <div class="main">
         <img id="back" src="image/backARROW_icon.png" alt="백" class="back" onclick="back_change()">  
-        <div id="qstn1" class="qstn1" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">1) 당신의 이름을 알려주세요.</div>
-        <div id="qstn2" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">2) 다리를 건너면 당신은 어디에 있나요?</div>
-        <div id="qstn3" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">3) 거기 날씨는 어떤가요?</div>
-        <div id="qstn4" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">4) 누군가 손을 흔들며 기다리고 있네요. 누구인가요?</div>
-        <div id="qstn5" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">5) 무엇을 하고 싶은가요?</div>
-        <div id="qstn6" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">6) 당신이 가장 힘들었던 순간은 무엇인가요?</div>
-        <div id="qstn7" class="qstn" onclick="input_items()" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">7) 이번 생, 괜찮았나요?</div>
+        <div id="qstn1" class="qstn1" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">1) 당신의 이름을 알려주세요.</div>
+        <div id="qstn2" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">2) 다리를 건너면 당신은 어디에 있나요?</div>
+        <div id="qstn3" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">3) 거기 날씨는 어떤가요?</div>
+        <div id="qstn4" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">4) 누군가 손을 흔들며 기다리고 있네요. 누구인가요?</div>
+        <div id="qstn5" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">5) 무엇을 하고 싶은가요?</div>
+        <div id="qstn6" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">6) 당신이 가장 힘들었던 순간은 무엇인가요?</div>
+        <div id="qstn7" class="qstn" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">7) 이번 생, 괜찮았나요?</div>
         <img id="front" src="image/frontARROW_icon.png" alt="다음" class="front" onclick="front_change()">
-        <input id="names" type="text" name="name">
+        <input id="names" type="text" name="name" autocomplete="off" onfocus="">
         <div id="pick">
-            <div id="p1" class="p_style">내 방 침대</div>
-            <div id="p2" class="p_style">자주가던 카페</div>
-            <div id="p3" class="p_style">산 꼭대기</div>
-            <div id="p4" class="p_style">과거 어느 순간</div>
-            <div id="p5" class="p_style">한적한 바다</div>
-            <div id="p6" class="p_style">넓은 들판</div>
-            <div id="p7" class="p_style">우주 어느 행성</div>
-            <div id="p8" class="p_style">여기가 어디일까요..</div>
-            <div id="p9" class="p_style">답9</div>
+            <div id="p1" class="p_style" onclick="check_pick(this)">내 방 침대</div>
+            <div id="p2" class="p_style" onclick="check_pick(this)">자주가던 카페</div>
+            <div id="p3" class="p_style" onclick="check_pick(this)">산 꼭대기</div>
+            <div id="p4" class="p_style" onclick="check_pick(this)">과거 어느 순간</div>
+            <div id="p5" class="p_style" onclick="check_pick(this)">한적한 바다</div>
+            <div id="p6" class="p_style" onclick="check_pick(this)">넓은 들판</div>
+            <div id="p7" class="p_style" onclick="check_pick(this)">우주 어느 행성</div>
+            <div id="p8" class="p_style" onclick="check_pick(this)">여기가 어디일까요..</div>
+            <div id="p9" class="p_style" onclick="check_pick(this)">답9</div>
         </div>
 
     </div>
