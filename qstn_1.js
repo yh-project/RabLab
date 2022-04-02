@@ -103,8 +103,15 @@ document.addEventListener('keyup', e => {
     if(cur_state != 0) return;
     if(!(e.key == "Enter")) return;
     
-   user_name = document.getElementById("names").value;
-   input_items();
+    user_name = document.getElementById("names").value;
+    if(name_box.value.trim() == "") {   //이름 입력 안될 시(공백포함) alert 소환
+        alert("이름을 입력해주세요");
+        name_box.value = "";
+        document.getElementById("names").focus();
+        return;
+    }
+    user_name = name_box.value;
+    sessionStorage.setItem('name',user_name);
 });
 
 function back_change() {
