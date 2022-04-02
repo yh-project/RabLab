@@ -308,6 +308,3 @@ function reset_storage() {
         sessionStorage.removeItem('page'+i+'_2');
     }
 }
-
-//sessionStorge : 리스트형식? -> 중복선택이 있음ㅋㅋㅋㅋㅋㅋㅋ => 중복선택을 2자리 숫자로 표시?
-//선택된 애만 테두리 보이도록하기
