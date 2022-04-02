@@ -191,6 +191,7 @@ function front_change() {
     document.getElementById("qstn"+cur_state).style.visibility="hidden";
     //마지막 페이지 처리
     if(cur_state == 7) {
+        window.print();
         return;
     }
     document.getElementById("qstn"+(cur_state+1)).style.visibility="visible";
