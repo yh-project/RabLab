@@ -112,6 +112,11 @@ body {
     top: 200px;
     align-items: center;
 }
+.qstn_hint {
+    text-align: center;
+    font-size: 25px;
+    color: #999999;
+}
 .back {
     display: block;
     margin-right: auto;
