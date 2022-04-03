@@ -136,6 +136,15 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+#vid_4 {
+    position: absolute;
+    display: block;
+    max-width: 208px;
+    max-height: 206px;
+    top: 369px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 @media ( min-width: 2560px ) {
