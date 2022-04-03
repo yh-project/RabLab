@@ -47,6 +47,8 @@ function front_change() {
     }
 }
 
+
+
 //뒤로 가는 버튼 클릭
 function back_change() {
     console.log(cur_state);

@@ -1,4 +1,14 @@
 var cur_state = 0;
+const items_cnt = [8,9,6,8,7,6];
+const items_css = [];
+items_css.push('./pick8_2.css');
+items_css.push('./pick9_3.css')
+items_css.push('./pick6_4.css')
+items_css.push('./pick8_5.css')
+items_css.push('./pick7_6.css')
+items_css.push('./pick6_7.css')
+
+var user_name;
 
 //txt list
 var pick_txt = [
@@ -79,18 +89,15 @@ for (let i = 1; i < 7; i++) {
 document.getElementById("pick").style.visibility="hidden"
 
 document.getElementById("names").focus();
-
-var cur_state = 0;
-const items_cnt = [8,9,6,8,7,6];
-const items_css = [];
-items_css.push('./pick8_2.css');
-items_css.push('./pick9_3.css')
-items_css.push('./pick6_4.css')
-items_css.push('./pick8_5.css')
-items_css.push('./pick7_6.css')
-items_css.push('./pick6_7.css')
-
-var user_name;
+document.getElementById('names').value = sessionStorage.getItem('name');
+try {
+    if (sessionStorage.getItem('cur_state') != null) {
+        cur_state = sessionStorage.getItem('cur_state');
+        back_change();
+    }
+} catch (error) {
+    console.log(error);
+}
 
 //키보드 입력 확인
 document.addEventListener('keyup', e => {
@@ -111,10 +118,31 @@ document.addEventListener('keyup', e => {
         return;
     }
     user_name = name_box.value;
-    sessionStorage.setItem('name',user_name);
+    front_change();
 });
 
 function back_change() {
+    if(cur_state == 7) {
+        cur_state--;
+        document.getElementById('qstn'+cur_state).style.visibility="visible";
+        document.getElementById('qstn'+1).style.visibility='hidden';
+        name_box.style.visibility='hidden';
+        document.getElementById('pick_css').href=items_css[cur_state-1];
+        for(let i=1;i<=items_cnt[cur_state-1];i++) {
+            document.getElementById('p'+i).textContent = pick_txt[cur_state-1][i-1];
+            document.getElementById('p'+i).style.visibility="visible";
+        }
+        for(let i = items_cnt[cur_state-1]+1;i<=9;i++) {
+            document.getElementById('p'+i).style.visibility="hidden";
+        }
+        reset_pick_css();
+        pick_list.forEach(pick => {
+            if (sessionStorage.getItem('page'+cur_state) == pick.attributes[0].value || sessionStorage.getItem('page'+cur_state+"_2") == pick.attributes[0].value)
+                pick.style.border = 'solid 3px #333333';
+        });
+
+        return;
+    }
     if(cur_state == 0) {
         if(confirm("앞으로 돌아갈 시 입력하신 데이터가 초기화됩니다.\n돌아가시겠습니까?")) {
             sessionStorage.setItem('cur_state',3);
@@ -191,7 +219,7 @@ function front_change() {
     document.getElementById("qstn"+cur_state).style.visibility="hidden";
     //마지막 페이지 처리
     if(cur_state == 7) {
-        window.print();
+        window.location.href = 'result_1.html';
         return;
     }
     document.getElementById("qstn"+(cur_state+1)).style.visibility="visible";

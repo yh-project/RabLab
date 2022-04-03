@@ -17,12 +17,13 @@
             h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
           })(document);
       </script>
+      <script src="result_3.js"></script>
 </head>
 <body>
     <div class="main">
         <img id="back" src="image/backARROW_icon.png" alt="백" class="back" onclick="back_change()">
         <div id="res1" class="text" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">당신의 이야기는 그곳에서 계속됩니다.</div>
-        <img id="front" src="image/frontARROW_icon.png" alt="다음" class="front" onclick="front_change()">
+        <img id="front" style="visibility: hidden;" src="image/frontARROW_icon.png" alt="다음" class="front" onclick="front_change()">
     </div>
 </body>
 </html>
