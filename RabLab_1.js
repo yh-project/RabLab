@@ -5,7 +5,6 @@ var txt1 = document.getElementById("text1");
 var txt2 = document.getElementById("text2");
 txt2.style.visibility = "hidden";
 
-
 // 타 페이지에서 데이터 가져오기(sessionStorage 이용)
 try {
     if (sessionStorage.getItem('cur_state') != null) {
@@ -19,6 +18,7 @@ try {
 //F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
 document.addEventListener('keyup', e => {
     if(!(e.key == "F5")) return;
+    if(!confirm("처음으로 돌아가시겠습니까?")) return;
     reset_storage();
     history.clear;
     window.location.href = 'index.html';

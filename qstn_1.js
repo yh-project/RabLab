@@ -102,9 +102,21 @@ try {
 //키보드 입력 확인
 document.addEventListener('keyup', e => {
     if(e.key == "F5") {
+        if(!confirm("입력하신 모든 데이터가 초기화되고 처음으로 돌아갑니다.\n처음으로 돌아가시겠습니까?")) return;
         reset_storage();
         history.clear;
         window.location.href = 'index.html';
+    }
+
+    if(document.activeElement != name_box) {
+        if(e.key == "ArrowLeft") {
+            back_change();
+            return;
+        }
+        if(e.key == "ArrowRight") {
+            front_change();
+            return;
+        }
     }
 
     if(cur_state != 0) return;

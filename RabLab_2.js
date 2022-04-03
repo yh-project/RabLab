@@ -23,8 +23,18 @@ try {
 }
 
 //F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
+//F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
 document.addEventListener('keyup', e => {
+    if(e.key == "ArrowLeft") {
+        back_change();
+        return;
+    }
+    if(e.key == "ArrowRight") {
+        front_change();
+        return;
+    }
     if(!(e.key == "F5")) return;
+    if(!confirm("처음으로 돌아가시겠습니까?")) return;
     reset_storage();
     history.clear;
     window.location.href = 'index.html';

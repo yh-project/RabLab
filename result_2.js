@@ -1,6 +1,15 @@
 //F5키 입력시 초기 화면으로 돌아가면서 sessionStorage 초기화
 document.addEventListener('keyup', e => {
+    if(e.key == "ArrowLeft") {
+        back_change();
+        return;
+    }
+    if(e.key == "ArrowRight") {
+        front_change();
+        return;
+    }
     if(!(e.key == "F5")) return;
+    if(!confirm("입력하신 모든 데이터가 초기화되고 처음으로 돌아갑니다.\n처음으로 돌아가시겠습니까?")) return;
     reset_storage();
     history.clear;
     window.location.href = 'index.html';
@@ -109,25 +118,6 @@ var 만족도_list = {
 
 document.getElementById("name_box").innerText = 이름+" 님";
 
-// document.getElementById("results").innerText = "다리를 건널 때가 왔습니다.\n\
-// 지구가 멸망하고 당신은 당신의 세계와 연결된\n\
-// 무지개 다리를 건넙니다.\n\
-// 발을 내딛는 순간 눈 앞의 광경은 난생 처음보는\n\
-// 신비한 광경이었습니다.\n\
-// 당신은 ((날씨 선택지))\n\
-// ((장소 선택지 1줄~2줄 [1]))\n\
-// 옆에는 ((사람 선택지)) 이 당신과 함께\n\
-// ((장소 선택지[2])) 있습니다.\n\
-// ** 그리고, ((복수 사람 선택지)) 도 옆에 있죠. **\n\
-// 그들과 함께 ((할 일 선택지 2줄))\n\
-// 당신의 ((힘든 순간 선택지))\n\
-// ((삶 만족도 선택지))은 희미해지고\n\
-// 이젠 행복한 나날만이 당신을 기다리고 있습니다.\n\
-// 누군가도 아는 당신의 이야기는 여기서 끝났지만\n\
-// 당신만 알고 있는 이야기는 지금부터 시작입니다.\n\
-// 라브 연구소는 당신의 새로운 인생을 응원합니다.\n\
-// ";
-
 var result_ment;
 result_ment = "다리를 건널 때가 왔습니다.\n\
 지구가 멸망하고 당신은 당신의 세계와 연결된\n\
@@ -150,8 +140,7 @@ result_ment = "다리를 건널 때가 왔습니다.\n\
 
 document.getElementById("results").innerText = result_ment;
 
-
-// window.print()
-// window.onafterprint = function() {
-//     window.location.href='result_3.html'
-// }
+window.print()
+window.onafterprint = function() {
+    window.location.href='result_3.html'
+}
