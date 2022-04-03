@@ -1,17 +1,22 @@
-var autoplayVideoInterval = setInterval("autoplayVideo()",1000);
-
-
-function autoplayVideo()
-{
-    var promise = document.querySelector('video').play();
-    if (promise !== undefined)
-    {
-
-        promise.then(function (_)
-        {
-            clearInterval(autoplayVideoInterval);
-        }).catch(function (error) {
-        // Show a "Play" button so that user can start playback.
-        });
-    }
+var aa;
+function front_change() {
+    document.getElementById('main').style.display='none';
+    document.getElementById('plz').style.visibility="visible";
+    document.getElementById('plz').play();
 }
+document.addEventListener('keydown', e => {
+    if(e.key == "F5") {
+        e.cancelBubble = true;
+        e.returnValue = false;
+        return;
+    }
+});
+// document.addEventListener('keydown', e => {
+//     console.log(e.key == "Escape");
+//     if(e.key == "F5" || e.key == "Escape" || e.key == "F11") {
+//         e.keyCode = 0;
+//         e.cancelBubble = true;
+//         e.returnValue = false;
+//         return;
+//     }
+// });

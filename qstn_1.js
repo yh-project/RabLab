@@ -105,7 +105,7 @@ document.addEventListener('keyup', e => {
         if(!confirm("입력하신 모든 데이터가 초기화되고 처음으로 돌아갑니다.\n처음으로 돌아가시겠습니까?")) return;
         reset_storage();
         history.clear;
-        window.location.href = 'index.html';
+        window.location.href = 'RabLab_1.html';
     }
 
     if(document.activeElement != name_box) {

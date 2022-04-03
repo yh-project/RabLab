@@ -17,13 +17,16 @@
         })(document);
     </script>
 </head>
-<body>
-    <div class="main">
+<body style="margin:0;">
+    <div id="main" class="main">
         <video muted autoplay loop id="vid_4">
           <source src="./video/290_headset.mp4">
         </video>
         <div id="text4" class="text2" style="font-family: rixmmjse-pro, serif; font-weight: 300; font-style: normal;">헤드셋을 착용 후, 오른쪽 화살표를 클릭해 주세요.</div>
-        <img src="image/frontARROW_icon.png" alt="다음" class="front" onclick="front_change()">
+        <img id="front" src="image/frontARROW_icon.png" alt="다음" class="front" onclick="front_change()">
     </div>
-</body>
-</html>
+    <video  autoplay="autoplay" src="./video/1920_1080__RABproject_ffinal_whiteout.mp4" id="plz" style="visibility: hidden;" onended="window.location.href = 'RabLab_1.html'"></video>
+
+</body></html>
+
+<script src="intro_2.js"> </script>

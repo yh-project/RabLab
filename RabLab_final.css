@@ -145,6 +145,11 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+#plz {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+}
 
 
 @media ( min-width: 2560px ) {

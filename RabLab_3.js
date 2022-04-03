@@ -51,7 +51,7 @@ document.addEventListener('keyup', e => {
     if(!confirm("처음으로 돌아가시겠습니까?")) return;
     reset_storage();
     history.clear;
-    window.location.href = 'index.html';
+    window.location.href = 'RabLab_1.html';
 });
 
 function reset_storage() {

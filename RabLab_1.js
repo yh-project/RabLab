@@ -4,6 +4,7 @@ var cur_state = 0;
 var txt1 = document.getElementById("text1");
 var txt2 = document.getElementById("text2");
 txt2.style.visibility = "hidden";
+document.getElementById('back').style.visibility="hidden";
 
 // 타 페이지에서 데이터 가져오기(sessionStorage 이용)
 try {
@@ -35,10 +36,10 @@ function reset_storage() {
 
 //앞으로 가는 버튼 클릭
 function front_change() {
-    console.log(cur_state);
     if(cur_state == 0) {
         txt1.style.visibility = "hidden";
         txt2.style.visibility = "visible";
+        document.getElementById('back').style.visibility = 'visible';
         cur_state++;
     }
     else if(cur_state == 1) {
@@ -55,11 +56,13 @@ function back_change() {
     if(cur_state == 2) {
         txt1.style.visibility = "hidden";
         txt2.style.visibility = "visible";
+        document.getElementById('back').style.visibility="visible";
         cur_state--;
     }
     else if(cur_state == 1) {
         txt1.style.visibility = "visible";
         txt2.style.visibility = "hidden";
+        document.getElementById('back').style.visibility = 'hidden';
         cur_state--;
     }
     else if(cur_state == 0) {
